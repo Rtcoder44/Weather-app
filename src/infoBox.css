@@ -1,0 +1,177 @@
+/* General styling for the infoBox */
+.infoBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    max-width: 400px;
+}
+
+/* Styling for temperature box */
+.temp_box {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 20px auto;
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.temp_box:hover {
+    transform: scale(1.05);
+}
+
+.temp_box h2 {
+    font-size: 28px;
+    margin: 0;
+}
+
+
+.temp_box p {
+    font-size: 18px;
+    margin: 6px 0;
+}
+
+
+.weather-image {
+    width: 400px;
+    height: 200px;
+    /* Additional styles as needed */
+}
+
+
+/* Styling for humidity box */
+.humidity {
+    width: 250px;
+    height: 150px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 20px;
+    background-color: #e0f7fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensure inner circle stays within bounds */
+    cursor: pointer; /* Interactive cursor */
+    transition: transform 0.3s ease-in-out;
+}
+
+.humidity:hover {
+    transform: scale(1.1);
+}
+
+.humidity h3 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.humidity p {
+    font-size: 18px;
+    margin: 4px 0;
+}
+
+.humidity-circle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.inner-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px; /* Adjust size as needed */
+    height: 80px;
+    background-color: #81c784; /* Initial color */
+    border-radius: 50%;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.humidity:hover .inner-circle {
+    background-color: #ff8a65; /* Change color on hover */
+    animation: pulse 1s infinite alternate; /* Example animation */
+}
+
+@keyframes pulse {
+    to {
+        transform: scale(1.2);
+    }
+}
+
+/* Styling for wind speed box */
+.wind-speed {
+    width: 250px;
+    height: 150px;
+    border: 2px solid #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 20px;
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Add border radius */
+    transition: transform 0.3s ease-in-out;
+}
+
+.wind-speed:hover {
+    transform: scale(1.1);
+}
+
+.wind-speed p {
+    font-size: 18px;
+    margin: 4px 0;
+}
+
+.wind-direction img {
+    width: 80px; /* Adjust size as needed */
+    height: 80px;
+    margin-top: 10px;
+    animation: rotateWindDirection 2s linear infinite; /* Example animation */
+}
+
+@keyframes rotateWindDirection {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Styling for sunrise and sunset box */
+.sunrise-sunset {
+    margin: 20px auto;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    background-color: #fff3e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+}
+
+.sunrise-sunset h3 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.sunrise-sunset p {
+    font-size: 18px;
+    margin: 4px 0;
+}
